@@ -1,12 +1,12 @@
-from asyncio import run
 from logging import basicConfig, INFO
 from os import getenv
-
-from aiogram.fsm.context import FSMContext
 from dotenv import load_dotenv
+
+from asyncio import run
 from aiogram import Bot, Dispatcher, types
 from aiogram.filters import CommandStart
-from aiogram.filters.state import State, StatesGroup, StateFilter
+from aiogram.filters.state import State, StatesGroup
+from aiogram.fsm.context import FSMContext
 
 load_dotenv()
 
@@ -36,8 +36,8 @@ async def start_view(message: types.Message, state: FSMContext):
     await state.set_state(UserState.START_STATE)
     start_message = ('Привіт! Для реєстрації напиши, будь ласка:\n'
                      '1. ПІБ\n'
-                     '2. Email\n'
-                     '3. Код')
+                     '2. Пошту(email)\n'
+                     '3. Персональний код підтвердження покупки')
     await message.answer(text=start_message)
 
 

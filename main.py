@@ -10,14 +10,14 @@ from aiogram.fsm.context import FSMContext
 
 load_dotenv()
 
-TOKEN_HISTORY = getenv('TOKEN_HISTORY')
+TOKEN_HIST = getenv('TOKEN_HIST')
 TOKEN_MATH = getenv('TOKEN_MATH')
 TOKEN_ENG = getenv('TOKEN_ENG')
-TOKEN_UKR = getenv('TOKEN_URK')
+TOKEN_UKR = getenv('TOKEN_UKR')
 TOKEN_BIO = getenv('TOKEN_BIO')
 TOKEN_GEO = getenv('TOKEN_GEO')
 
-bot_hist = Bot(token=TOKEN_HISTORY)
+bot_hist = Bot(token=TOKEN_HIST)
 bot_math = Bot(token=TOKEN_MATH)
 bot_eng = Bot(token=TOKEN_ENG)
 bot_ukr = Bot(token=TOKEN_UKR)
